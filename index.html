@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Expense Tracker App</title>
+</head>
+<body>
+    <h1>Expense Tracker App</h1>
+    <div class="input-section">
+        <label for="category-select">Category:</label>
+        <select id="category-select">
+            <option value="Food & Beverage">Food & Beverage</option>
+            <option value="Game Expenses">Game expenses</option>
+            <option value="Rent">Rent</option>
+            <option value="Transport">Transport</option>
+            <option value="Relaxing">Relaxing</option>
+        </select>
+        <label for="amount-input">Amount:</label>
+        <input type="number" id="amount-input">
+        <label for="date-input">Date:</label>
+        <input type="date" id="date-input">
+        <label for="description-input">Description:</label>
+        <input type="text" id="description-input">
+        <button id="add-btn">Add</button>
+    </div>
+    <div class="expenses-list">
+        <h2>Expenses List</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Category</th>
+                    <th>Amount</th>
+                    <th>Date</th>
+                    <th>Description</th>
+                    <th>Delete</th>
+                </tr>   
+            </thead>
+            <tbody id="expense-table-body">
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td>Total:</td>
+                    <td id="total-amount"></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </tfoot>
+        </table>
+    </div>
+    <div class="budget-section">
+        <h2>Set Monthly Budget</h2>
+        <label for="budget-input">Budget:</label>
+        <input type="number" id="budget-input">
+        <button id="set-budget-btn">Set Budget</button>
+        <p id="budget-message"></p>
+    </div>
+    <div class="menu">
+        <h2>Menu</h2>
+        <button id="save-btn">Save Expenses</button>
+        <button id="load-btn">Load Expenses</button>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
